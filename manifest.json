@@ -1,0 +1,9 @@
+{
+    "name": "Quick WebArchive",
+    "description": "💾Chrome extension for web.archive.org",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    }
+  }
