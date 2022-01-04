@@ -5,7 +5,7 @@ import requests
 
 # Setup
 app = FastAPI()
-webarchive_top = "https://web.archive.org/"
+webarchive = "https://web.archive.org/"
 # Setup end
 
 # api system
@@ -13,7 +13,9 @@ webarchive_top = "https://web.archive.org/"
 def do_save(p: str):
     url = p
     try:
-        return({"status": "success", "url": url})
+        response = requests.get(p)
+        print(response)
+        return({"status": "success", "url": response.url})
     except:
         print(url)
         return({"status": "error"})
