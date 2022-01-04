@@ -20,7 +20,6 @@ app = FastAPI()
 @app.get("/save")
 def do_save(p: str):
     url = p
-    
     try:
         driver.get("https://web.archive.org/")
         time.sleep(1)
@@ -36,6 +35,7 @@ def do_save(p: str):
         submit_button = driver.find_element(by=By.CLASS_NAME, value="web-save-button")
         submit_button.send_keys(Keys.RETURN)
         print("3")
+        print("取得したサイトのURL:" + url)
         print("success!")
         return({"status": "success", "url": url})
     except:
