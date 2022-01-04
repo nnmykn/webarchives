@@ -39,6 +39,7 @@ def do_save(p: str):
         print("success!")
         return({"status": "success", "url": url})
     except:
+        print(url)
         return({"status": "error"})
 
 # api system end
