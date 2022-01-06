@@ -8,4 +8,6 @@ Quick WebArchiveは、web.archive.orgに毎回アクセスしなくてもワン�
 
 個人的に欲しかったので作りました。
 
+⚠APIが未完成ですPullRequestください
+
 ## Install

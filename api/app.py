@@ -10,12 +10,12 @@ webarchive = "https://web.archive.org/"
 
 # api system
 @app.get("/save")
-def do_save(p: str):
-    url = p
+def do_save(url: str):
+    url = str(url)
     try:
-        response = requests.get(p)
-        print(response)
-        return({"status": "success", "url": response.url})
+        session = requests.Session()
+        req = session.get(f"http://web.archive.org/save/{url}")
+        return({"status": "success", "url": url, "answer": req.text})
     except:
         print(url)
         return({"status": "error"})

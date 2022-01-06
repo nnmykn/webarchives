@@ -1,7 +1,7 @@
 function clickHandler(e) {
     let url = document.getElementById("url").value;
     let req = new XMLHttpRequest();
-    req.open('GET', `https://quick-webarchive.kan.run/save?p=${url}`, true);
+    req.open('GET', `https://quick-webarchive.kan.run/save?url=${url}`, true);
     req.onload = function() {
         console.log("保存に成功しました");
     }
